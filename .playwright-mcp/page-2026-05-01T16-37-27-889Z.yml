@@ -1,0 +1,376 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Mira Growth Hack" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+      - navigation "Основная навигация" [ref=e5]:
+        - link "Что это?" [ref=e6] [cursor=pointer]:
+          - /url: "#about"
+        - link "Призы" [ref=e7] [cursor=pointer]:
+          - /url: "#benefits"
+        - link "Треки" [ref=e8] [cursor=pointer]:
+          - /url: "#tracks"
+        - link "Этапы" [ref=e9] [cursor=pointer]:
+          - /url: "#steps"
+        - link "Mira" [ref=e10] [cursor=pointer]:
+          - /url: "#mira"
+        - link "Таймлайн" [ref=e11] [cursor=pointer]:
+          - /url: "#timeline"
+        - link "FAQ" [ref=e12] [cursor=pointer]:
+          - /url: "#faq"
+      - link "Регистрация" [ref=e14] [cursor=pointer]:
+        - /url: https://t.me/mira?start=growth_hack
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: Mira Growth Hack
+        - heading "Построй свою AI-powered growth-машину за 10 дней" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Привлекай пользователей в Mira через контент, AI-агентов, мемы, лендинги, ботов, инфлюенсеров или любые другие growth-механики.
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - img [ref=e24]
+            - text: 12–21 мая
+          - generic [ref=e26]:
+            - img [ref=e27]
+            - text: Казахстан
+          - generic [ref=e30]:
+            - img [ref=e31]
+            - text: до 4 человек
+        - generic [ref=e35]:
+          - link "Зарегистрироваться" [ref=e36] [cursor=pointer]:
+            - /url: https://t.me/mira?start=growth_hack
+            - text: Зарегистрироваться
+            - img [ref=e37]
+          - link "Войти в сообщество" [ref=e39] [cursor=pointer]:
+            - /url: https://t.me/miramedia_ru
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - paragraph [ref=e44]: До старта хакатона
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]: "10"
+              - generic [ref=e48]: дней
+            - generic [ref=e49]:
+              - generic [ref=e50]: "02"
+              - generic [ref=e51]: часов
+            - generic [ref=e52]:
+              - generic [ref=e53]: "22"
+              - generic [ref=e54]: мин
+          - generic [ref=e55]:
+            - img [ref=e56]
+            - text: 12 мая, 00:00
+        - generic [ref=e58]:
+          - paragraph [ref=e59]: Growth target
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: "1"
+              - generic [ref=e63]: Запусти гипотезу
+            - generic [ref=e64]:
+              - generic [ref=e65]: "2"
+              - generic [ref=e66]: Получи уникальную ссылку
+            - generic [ref=e67]:
+              - generic [ref=e68]: "3"
+              - generic [ref=e69]: Приведи реальных пользователей
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: Что это?
+        - heading "Соревнование, где важны не слайды, а реальные пользователи." [level=2] [ref=e75]
+      - generic [ref=e76]:
+        - paragraph [ref=e77]: Mira Growth Hack — это соревнование, где участники привлекают пользователей в Mira и тестируют свои growth-гипотезы на практике.
+        - paragraph [ref=e78]: Можно запускать контент, делать мемы, вести рассылки, собирать лендинги, подключать Telegram-чаты, работать с инфлюенсерами, писать ботов или придумывать что-то совсем нестандартное. Главное — привести реальных пользователей.
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - img [ref=e81]
+            - text: контент
+          - generic [ref=e84]:
+            - img [ref=e85]
+            - text: AI-агенты
+          - generic [ref=e88]:
+            - img [ref=e89]
+            - text: мемы
+          - generic [ref=e92]:
+            - img [ref=e93]
+            - text: лендинги
+          - generic [ref=e96]:
+            - img [ref=e97]
+            - text: боты
+          - generic [ref=e100]:
+            - img [ref=e101]
+            - text: инфлюенсеры
+          - generic [ref=e104]:
+            - img [ref=e105]
+            - text: Telegram-чаты
+          - generic [ref=e108]:
+            - img [ref=e109]
+            - text: SEO
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - paragraph [ref=e115]: Призы и опыт
+        - heading "Что ты получишь?" [level=2] [ref=e116]
+      - generic [ref=e117]:
+        - article [ref=e118]:
+          - img [ref=e120]
+          - heading "Возможность попасть в команду Mira" [level=3] [ref=e125]
+          - paragraph [ref=e126]: Сильные участники смогут показать себя перед международной командой продукта.
+        - article [ref=e127]:
+          - img [ref=e129]
+          - heading "Шанс выиграть $$$" [level=3] [ref=e132]
+          - paragraph [ref=e133]: Лучшие участники и команды получат денежные призы по итогам challenge.
+        - article [ref=e134]:
+          - img [ref=e136]
+          - heading "1 месяц Mira Pro" [level=3] [ref=e139]
+          - paragraph [ref=e140]: Доступ к Claude Sonnet, GPT-5, генерации видео и продвинутым автоматизациям.
+        - article [ref=e141]:
+          - img [ref=e143]
+          - heading "Практический опыт в growth marketing" [level=3] [ref=e147]
+          - paragraph [ref=e148]: "Проверишь реальные каналы привлечения: от Telegram и Reels до ботов и SEO."
+        - article [ref=e149]:
+          - img [ref=e151]
+          - heading "Кейс в портфолио и сертификат" [level=3] [ref=e154]
+          - paragraph [ref=e155]: "У тебя будет понятный результат: гипотеза, кампания, канал и место в leaderboard."
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - paragraph [ref=e159]: Треки
+        - heading "Выбери свой growth-угол атаки" [level=2] [ref=e160]
+        - paragraph [ref=e161]: На desktop карточки раскрываются при наведении или фокусе. На телефоне — по нажатию.
+      - generic [ref=e162]:
+        - button "Показать описание трека Контент-завод 01 / Create Контент-завод Механика Создавай AI-видео, креативы, хуки, сценарии, фото, посты и короткие форматы для соцсетей. Нажми еще раз, чтобы закрыть" [ref=e163]:
+          - generic [ref=e164]: Показать описание трека Контент-завод
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - generic [ref=e168]: 01 / Create
+                - img [ref=e170]
+              - generic [ref=e173]: Контент-завод
+            - generic [ref=e174]:
+              - generic [ref=e175]: Механика
+              - generic [ref=e176]: Создавай AI-видео, креативы, хуки, сценарии, фото, посты и короткие форматы для соцсетей.
+              - generic [ref=e177]: Нажми еще раз, чтобы закрыть
+        - button "Показать описание трека Аутрич инфлюенсеров 02 / Reach Аутрич инфлюенсеров Механика Придумывай нестандартные способы выйти на микроинфлюенсеров и довести контакт до коллаборации. Нажми еще раз, чтобы закрыть" [ref=e178]:
+          - generic [ref=e179]: Показать описание трека Аутрич инфлюенсеров
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - generic [ref=e183]: 02 / Reach
+                - img [ref=e185]
+              - generic [ref=e188]: Аутрич инфлюенсеров
+            - generic [ref=e189]:
+              - generic [ref=e190]: Механика
+              - generic [ref=e191]: Придумывай нестандартные способы выйти на микроинфлюенсеров и довести контакт до коллаборации.
+              - generic [ref=e192]: Нажми еще раз, чтобы закрыть
+        - button "Показать описание трека SEO / Лендинги 03 / Rank SEO / Лендинги Механика Собирай страницы, подборки и SEO-контент, которые ранжируются и конвертят новых пользователей. Нажми еще раз, чтобы закрыть" [ref=e193]:
+          - generic [ref=e194]: Показать описание трека SEO / Лендинги
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - generic [ref=e198]: 03 / Rank
+                - img [ref=e200]
+              - generic [ref=e203]: SEO / Лендинги
+            - generic [ref=e204]:
+              - generic [ref=e205]: Механика
+              - generic [ref=e206]: Собирай страницы, подборки и SEO-контент, которые ранжируются и конвертят новых пользователей.
+              - generic [ref=e207]: Нажми еще раз, чтобы закрыть
+        - button "Показать описание трека Лента юзкейсов 04 / Stories Лента юзкейсов Механика Публикуй реальные use cases Mira для студентов, маркетологов, founders, креаторов и команд. Нажми еще раз, чтобы закрыть" [ref=e208]:
+          - generic [ref=e209]: Показать описание трека Лента юзкейсов
+          - generic [ref=e210]:
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]: 04 / Stories
+                - img [ref=e215]
+              - generic [ref=e218]: Лента юзкейсов
+            - generic [ref=e219]:
+              - generic [ref=e220]: Механика
+              - generic [ref=e221]: Публикуй реальные use cases Mira для студентов, маркетологов, founders, креаторов и команд.
+              - generic [ref=e222]: Нажми еще раз, чтобы закрыть
+        - button "Показать описание трека Комьюнити-генератор 05 / Loop Комьюнити-генератор Механика Запускай реферальные цепочки, челленджи, групповых ботов, интерактивы и задания в чатах. Нажми еще раз, чтобы закрыть" [ref=e223]:
+          - generic [ref=e224]: Показать описание трека Комьюнити-генератор
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227]:
+                - generic [ref=e228]: 05 / Loop
+                - img [ref=e230]
+              - generic [ref=e233]: Комьюнити-генератор
+            - generic [ref=e234]:
+              - generic [ref=e235]: Механика
+              - generic [ref=e236]: Запускай реферальные цепочки, челленджи, групповых ботов, интерактивы и задания в чатах.
+              - generic [ref=e237]: Нажми еще раз, чтобы закрыть
+        - 'button "Показать описание трека Виральные механики / Трафик 06 / Viral Виральные механики / Трафик Механика Собери механику, которую хочется переслать: quiz, мини-игру, мем-генератор или Telegram-бота. Нажми еще раз, чтобы закрыть" [ref=e238]':
+          - generic [ref=e239]: Показать описание трека Виральные механики / Трафик
+          - generic [ref=e240]:
+            - generic [ref=e241]:
+              - generic [ref=e242]:
+                - generic [ref=e243]: 06 / Viral
+                - img [ref=e245]
+              - generic [ref=e248]: Виральные механики / Трафик
+            - generic [ref=e249]:
+              - generic [ref=e250]: Механика
+              - generic [ref=e251]: "Собери механику, которую хочется переслать: quiz, мини-игру, мем-генератор или Telegram-бота."
+              - generic [ref=e252]: Нажми еще раз, чтобы закрыть
+    - generic [ref=e254]:
+      - generic [ref=e255]:
+        - paragraph [ref=e256]: Этапы
+        - heading "4 шага до своей growth-кампании" [level=2] [ref=e257]
+      - generic [ref=e258]:
+        - generic [ref=e259]:
+          - article [ref=e260]:
+            - generic [ref=e262]: "1"
+            - generic [ref=e264]:
+              - heading "Регистрируешься" [level=3] [ref=e265]
+              - paragraph [ref=e266]: "Заполняешь форму и выбираешь формат участия: индивидуально или в команде до 4 человек."
+          - article [ref=e267]:
+            - generic [ref=e269]: "2"
+            - generic [ref=e271]:
+              - heading "Получаешь Mira Pro и свою ссылку" [level=3] [ref=e272]
+              - paragraph [ref=e273]: После старта challenge ты получаешь доступ к Mira Pro и уникальную ссылку для подсчета пользователей.
+          - article [ref=e274]:
+            - generic [ref=e276]: "3"
+            - generic [ref=e278]:
+              - heading "Запускаешь growth-механику" [level=3] [ref=e279]
+              - paragraph [ref=e280]: "Выбираешь любой подход: контент, AI-агенты, Telegram, Reels, лендинги, боты, инфлюенсеры или SEO."
+          - article [ref=e281]:
+            - generic [ref=e283]: "4"
+            - generic [ref=e284]:
+              - heading "Следишь за leaderboard" [level=3] [ref=e285]
+              - paragraph [ref=e286]: Каждая регистрация по твоей ссылке засчитывается в результат. Чем больше пользователей, тем выше позиция.
+        - generic [ref=e287]:
+          - generic [ref=e288]:
+            - generic [ref=e289]:
+              - paragraph [ref=e290]: Leaderboard preview
+              - heading "Твой результат виден сразу" [level=3] [ref=e291]
+            - img [ref=e293]
+          - generic [ref=e299]:
+            - generic [ref=e300]:
+              - generic [ref=e301]: "#1"
+              - generic [ref=e302]: Team Viral
+              - generic [ref=e303]: "248"
+            - generic [ref=e304]:
+              - generic [ref=e305]: "#2"
+              - generic [ref=e306]: Mira Makers
+              - generic [ref=e307]: "193"
+            - generic [ref=e308]:
+              - generic [ref=e309]: "#3"
+              - generic [ref=e310]: SEO Sprint
+              - generic [ref=e311]: "141"
+          - generic [ref=e312]: Каждая регистрация по твоей ссылке увеличивает позицию в leaderboard.
+    - generic [ref=e315]:
+      - generic [ref=e316]:
+        - img [ref=e318]
+        - paragraph [ref=e321]: Что такое Mira?
+        - heading "Главный AI-агент Telegram, который не просто отвечает, а действует." [level=2] [ref=e322]
+        - paragraph [ref=e323]: Mira помогает превращать переписки, идеи и задачи в конкретные действия прямо внутри Telegram.
+      - generic [ref=e324]:
+        - article [ref=e325]:
+          - img [ref=e326]
+          - heading "Действует, а не просто отвечает" [level=3] [ref=e329]
+          - paragraph [ref=e330]: Mira помогает доводить задачи до результата, а не оставляет тебя с очередным текстовым ответом.
+        - article [ref=e331]:
+          - img [ref=e332]
+          - heading "Интегрируется с сервисами" [level=3] [ref=e335]
+          - paragraph [ref=e336]: Google Calendar, Notion, Linear, GitHub и другие инструменты можно подключать к рабочему процессу.
+        - article [ref=e337]:
+          - img [ref=e338]
+          - heading "Помогает с задачами и планированием" [level=3] [ref=e341]
+          - paragraph [ref=e342]: Можно ставить задачи, структурировать планы и управлять рабочими процессами прямо в Telegram.
+        - article [ref=e343]:
+          - img [ref=e344]
+          - heading "Пишет и планирует контент" [level=3] [ref=e347]
+          - paragraph [ref=e348]: Mira помогает с идеями, текстами, сценариями, постами, креативами и автоматизацией публикаций.
+    - generic [ref=e350]:
+      - generic [ref=e351]:
+        - paragraph [ref=e352]: Таймлайн
+        - heading "10 дней на запуск и проверку гипотезы" [level=2] [ref=e353]
+      - generic [ref=e354]:
+        - article [ref=e356]:
+          - generic [ref=e357]: "1"
+          - paragraph [ref=e358]: До 12 мая
+          - heading "Регистрация" [level=3] [ref=e359]
+          - paragraph [ref=e360]: Регистрация участников и команд.
+        - article [ref=e361]:
+          - generic [ref=e362]: "2"
+          - paragraph [ref=e363]: 12 мая
+          - heading "Старт" [level=3] [ref=e364]
+          - paragraph [ref=e365]: Участники получают доступ к Mira Pro, свои ссылки и начинают запускать growth-механики.
+        - article [ref=e366]:
+          - generic [ref=e367]: "3"
+          - paragraph [ref=e368]: 12–21 мая
+          - heading "Challenge" [level=3] [ref=e369]
+          - paragraph [ref=e370]: Команды тестируют идеи, привлекают пользователей и следят за результатами в leaderboard.
+        - article [ref=e371]:
+          - generic [ref=e372]: "4"
+          - paragraph [ref=e373]: После 21 мая
+          - heading "Итоги" [level=3] [ref=e374]
+          - paragraph [ref=e375]: Подведение итогов и объявление победителей произойдет в течение 2 недель после Mira Growth Hack.
+    - generic [ref=e377]:
+      - generic [ref=e378]:
+        - paragraph [ref=e379]: FAQ
+        - heading "Частые вопросы" [level=2] [ref=e380]
+      - generic [ref=e381]:
+        - generic [ref=e382]:
+          - heading "Нужно ли уметь кодить?" [level=3] [ref=e383]:
+            - button "Нужно ли уметь кодить?" [expanded] [ref=e384]:
+              - text: Нужно ли уметь кодить?
+              - img [ref=e385]
+          - paragraph [ref=e389]: Нет. Можно участвовать через контент, Telegram, мемы, рассылки, Reels, комьюнити или любые другие growth-подходы. Кодинг может помочь, но не обязателен.
+        - generic [ref=e390]:
+          - heading "Можно участвовать одному?" [level=3] [ref=e391]:
+            - button "Можно участвовать одному?" [ref=e392]:
+              - text: Можно участвовать одному?
+              - img [ref=e393]
+          - paragraph [ref=e395]: Да. Можно участвовать индивидуально или собрать команду до 4 человек.
+        - generic [ref=e396]:
+          - heading "Кто может участвовать?" [level=3] [ref=e397]:
+            - button "Кто может участвовать?" [ref=e398]:
+              - text: Кто может участвовать?
+              - img [ref=e399]
+          - paragraph [ref=e401]: "Участники из Казахстана: студенты, молодые специалисты, маркетологи, креаторы, product managers, founders, Telegram-админы и AI-энтузиасты."
+        - generic [ref=e402]:
+          - heading "Что считается результатом?" [level=3] [ref=e403]:
+            - button "Что считается результатом?" [ref=e404]:
+              - text: Что считается результатом?
+              - img [ref=e405]
+          - paragraph [ref=e407]: Основной результат — количество пользователей, которые зарегистрировались по твоей уникальной ссылке.
+        - generic [ref=e408]:
+          - heading "Что такое Mira Pro?" [level=3] [ref=e409]:
+            - button "Что такое Mira Pro?" [ref=e410]:
+              - text: Что такое Mira Pro?
+              - img [ref=e411]
+          - paragraph [ref=e413]: "Mira Pro — расширенный доступ к возможностям Mira: продвинутые AI-модели, генерация изображений и видео, автоматизации и приоритетный доступ."
+        - generic [ref=e414]:
+          - heading "Какие методы можно использовать?" [level=3] [ref=e415]:
+            - button "Какие методы можно использовать?" [ref=e416]:
+              - text: Какие методы можно использовать?
+              - img [ref=e417]
+          - paragraph [ref=e419]: Можно использовать контент, AI-агенты, Telegram-чаты, Reels, TikTok, лендинги, ботов, инфлюенсеров, SEO и другие легальные способы привлечения пользователей.
+    - generic [ref=e422]:
+      - generic [ref=e423]:
+        - paragraph [ref=e424]: Финальный CTA
+        - heading "Готов построить свою growth-машину?" [level=2] [ref=e425]
+        - paragraph [ref=e426]: Запускай кампанию, приводи пользователей и покажи себя команде Mira.
+      - link "Зарегистрироваться" [ref=e427] [cursor=pointer]:
+        - /url: https://t.me/mira?start=growth_hack
+        - text: Зарегистрироваться
+        - img [ref=e428]
+  - contentinfo [ref=e430]:
+    - generic [ref=e431]:
+      - generic [ref=e432]:
+        - paragraph [ref=e433]: Mira Growth Hack
+        - paragraph [ref=e434]: 12–21 мая · Казахстан · AI-powered growth challenge
+      - navigation "Навигация в футере" [ref=e435]:
+        - link "Что это?" [ref=e436] [cursor=pointer]:
+          - /url: "#about"
+        - link "Призы" [ref=e437] [cursor=pointer]:
+          - /url: "#benefits"
+        - link "Треки" [ref=e438] [cursor=pointer]:
+          - /url: "#tracks"
+        - link "Этапы" [ref=e439] [cursor=pointer]:
+          - /url: "#steps"
+        - link "Mira" [ref=e440] [cursor=pointer]:
+          - /url: "#mira"
+        - link "Таймлайн" [ref=e441] [cursor=pointer]:
+          - /url: "#timeline"
+        - link "FAQ" [ref=e442] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Telegram" [ref=e443] [cursor=pointer]:
+          - /url: https://t.me/miramedia_ru
+  - button "Open Next.js Dev Tools" [ref=e449] [cursor=pointer]:
+    - img [ref=e450]
