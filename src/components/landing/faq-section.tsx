@@ -14,12 +14,7 @@ export function FaqSection({ content }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <Section
-      id="faq"
-      eyebrow={content.faq.eyebrow}
-      title={content.faq.title}
-      className="bg-secondary/45"
-    >
+    <Section id="faq" eyebrow={content.faq.eyebrow} title={content.faq.title}>
       <div className="mx-auto max-w-4xl space-y-3">
         {content.faq.items.map((item, index) => {
           const isOpen = openIndex === index;

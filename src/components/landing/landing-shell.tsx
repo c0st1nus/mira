@@ -22,7 +22,8 @@ export function LandingShell({ language }: { language: Language }) {
       <div aria-hidden="true" className="ambient-bg" />
       <div className="relative z-10">
         <Header content={content} language={language} />
-        <main>
+        <main className="landing-main">
+          <div aria-hidden="true" className="section-flow-bg" />
           <HeroSection content={content} />
           <AboutChallengeSection content={content} />
           <BenefitsSection content={content} />

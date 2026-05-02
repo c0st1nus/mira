@@ -8,10 +8,10 @@ type AboutChallengeSectionProps = {
 
 export function AboutChallengeSection({ content }: AboutChallengeSectionProps) {
   return (
-    <Section id="about" className="bg-background">
+    <Section id="about">
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
-          <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+          <p className="mb-4 font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary sm:text-lg">
             {content.about.eyebrow}
           </p>
           <h2 className="font-heading text-4xl font-extrabold leading-[1.02] tracking-[-0.06em] text-foreground sm:text-6xl">
@@ -24,6 +24,9 @@ export function AboutChallengeSection({ content }: AboutChallengeSectionProps) {
           </p>
           <p className="mt-5 text-base leading-8 text-muted-foreground">
             {content.about.text}
+          </p>
+          <p className="mt-5 rounded-[1.25rem] bg-brand-blue-soft px-5 py-4 text-lg font-extrabold leading-7 text-accent-foreground sm:text-xl">
+            {content.about.highlight}
           </p>
           <div className="mt-7 flex flex-wrap gap-2">
             {content.about.tags.map((tag) => (

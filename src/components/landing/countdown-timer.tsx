@@ -40,7 +40,7 @@ export function CountdownTimer({ content }: CountdownTimerProps) {
 
   return (
     <div className="soft-shadow rounded-[2rem] border border-border bg-card/95 p-5 sm:bg-card/90 sm:p-7 sm:backdrop-blur">
-      <p className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+      <p className="mb-5 font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary sm:text-lg">
         {content.countdown.label}
       </p>
       <div className="grid grid-cols-3 gap-3">

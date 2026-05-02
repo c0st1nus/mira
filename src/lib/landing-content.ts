@@ -1,6 +1,7 @@
 export type Language = "ru" | "en" | "kk";
 
-export const registrationHref = "https://t.me/mira?start=_tgr_Jfm8eCRjNTEy";
+export const registrationHref = "https://forms.gle/ptuXWSXY8TdYLK4t5";
+export const communityHref = "https://t.me/+MhQzTZsn9ttiNzJi";
 
 export const languages: { code: Language; label: string }[] = [
   { code: "ru", label: "RU" },
@@ -146,9 +147,10 @@ export const landingContent = {
     },
     about: {
       eyebrow: "Что это?",
-      title: "Соревнование, где важны не слайды, а реальные пользователи.",
+      title: "Mira Growth Hack",
       lead: "Mira Growth Hack — это соревнование, где участники привлекают пользователей в Mira и тестируют свои growth-гипотезы на практике.",
-      text: "Можно запускать контент, делать мемы, вести рассылки, собирать лендинги, подключать Telegram-чаты, работать с инфлюенсерами, писать ботов или придумывать что-то совсем нестандартное. Главное — привести реальных пользователей.",
+      text: "Можно запускать контент, делать мемы, вести рассылки, собирать лендинги, подключать Telegram-чаты, работать с инфлюенсерами, писать ботов или придумывать что-то совсем нестандартное.",
+      highlight: "Главное — привести реальных пользователей!",
       tags: [
         "контент",
         "AI-агенты",
@@ -306,7 +308,13 @@ export const landingContent = {
       description:
         "Запускай кампанию, приводи пользователей и покажи себя команде Mira.",
     },
-    footer: "12–21 мая · Казахстан · AI-powered growth challenge",
+    footer: {
+      description:
+        "Mira Growth Hack — это 10-дневный AI-powered growth challenge для участников из Казахстана. С 12 по 21 мая участники привлекают пользователей в Mira через контент, мемы, лендинги, Telegram-чаты, ботов, инфлюенсеров, SEO и другие growth-механики.",
+      reachOut: "связаться с нами",
+      rights: "All rights reserved.",
+      poweredBy: "Powered by",
+    },
   },
   en: {
     nav: ["About", "Prizes", "Tracks", "Steps", "Mira", "Timeline", "FAQ"],
@@ -338,9 +346,10 @@ export const landingContent = {
     },
     about: {
       eyebrow: "About",
-      title: "A challenge where real users matter more than slides.",
+      title: "Mira Growth Hack",
       lead: "Mira Growth Hack is a competition where participants bring users to Mira and test growth hypotheses in practice.",
-      text: "Launch content, memes, newsletters, landing pages, Telegram chats, influencer campaigns, bots, or something completely unexpected. The key goal is simple: bring real users.",
+      text: "You can launch content, make memes, run newsletters, build landing pages, connect Telegram chats, work with influencers, write bots, or come up with something completely unconventional.",
+      highlight: "The main goal is to bring real users!",
       tags: [
         "content",
         "AI agents",
@@ -501,7 +510,13 @@ export const landingContent = {
       description:
         "Launch a campaign, bring users, and show what you can do to the Mira team.",
     },
-    footer: "May 12–21 · Kazakhstan · AI-powered growth challenge",
+    footer: {
+      description:
+        "Mira Growth Hack is a 10-day AI-powered growth challenge for participants from Kazakhstan. From May 12 to 21, participants bring users to Mira through content, memes, landing pages, Telegram chats, bots, influencers, SEO, and other growth mechanics.",
+      reachOut: "reach out to us",
+      rights: "All rights reserved.",
+      poweredBy: "Powered by",
+    },
   },
   kk: {
     nav: [
@@ -541,9 +556,10 @@ export const landingContent = {
     },
     about: {
       eyebrow: "Бұл не?",
-      title: "Слайд емес, нақты қолданушы маңызды болатын жарыс.",
-      lead: "Mira Growth Hack — қатысушылар Mira-ға қолданушылар әкеліп, growth-гипотезаларын практикада тексеретін жарыс.",
-      text: "Контент, мем, рассылка, лендинг, Telegram-чат, инфлюенсер, бот немесе мүлдем жаңа механика іске қосуға болады. Бастысы — нақты қолданушылар әкелу.",
+      title: "Mira Growth Hack",
+      lead: "Mira Growth Hack — қатысушылар Mira-ға қолданушылар тартып, growth-гипотезаларын практикада тексеретін жарыс.",
+      text: "Контент іске қосуға, мем жасауға, рассылкалар жүргізуге, лендингтер жинауға, Telegram-чаттарды қосуға, инфлюенсерлермен жұмыс істеуге, бот жазуға немесе мүлдем стандарттан тыс нәрсе ойлап табуға болады.",
+      highlight: "Бастысы — нақты қолданушылар әкелу!",
       tags: [
         "контент",
         "AI-агенттер",
@@ -701,7 +717,13 @@ export const landingContent = {
       description:
         "Кампанияны іске қос, қолданушы әкел және Mira командасына өзіңді көрсет.",
     },
-    footer: "12–21 мамыр · Қазақстан · AI-powered growth challenge",
+    footer: {
+      description:
+        "Mira Growth Hack — Қазақстан қатысушыларына арналған 10 күндік AI-powered growth challenge. 12-21 мамыр аралығында қатысушылар Mira-ға қолданушыларды контент, мемдер, лендингтер, Telegram-чаттар, боттар, инфлюенсерлер, SEO және басқа growth-механикалар арқылы тартады.",
+      reachOut: "бізбен байланысу",
+      rights: "All rights reserved.",
+      poweredBy: "Powered by",
+    },
   },
 };
 

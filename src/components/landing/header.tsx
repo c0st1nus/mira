@@ -25,12 +25,12 @@ export function Header({ content, language }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/96 px-4 supports-backdrop-filter:sm:bg-background/86 supports-backdrop-filter:sm:backdrop-blur-xl sm:px-6 lg:px-8">
       <div className="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 py-2">
-        <a
+        <Link
           href="#hero"
           className="inline-flex min-h-10 max-w-40 items-center rounded-full font-heading text-base font-extrabold tracking-[-0.04em] text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:max-w-none sm:text-lg"
         >
           Mira Growth Hack
-        </a>
+        </Link>
 
         <nav
           aria-label="Основная навигация"
@@ -68,6 +68,8 @@ export function Header({ content, language }: HeaderProps) {
           <ThemeToggle />
           <a
             href={registrationHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden min-h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:inline-flex"
           >
             {content.cta}

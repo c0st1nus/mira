@@ -43,7 +43,7 @@ export function StepsSection({ content }: StepsSectionProps) {
         <div className="soft-shadow rounded-[2.5rem] border border-border bg-card p-5 sm:p-7">
           <div className="mb-6 flex items-center justify-between gap-4">
             <div>
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+              <p className="font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary sm:text-lg">
                 {content.steps.leaderboardLabel}
               </p>
               <h3 className="mt-2 font-heading text-3xl font-extrabold tracking-[-0.05em]">

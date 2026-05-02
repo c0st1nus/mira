@@ -8,13 +8,13 @@ type MiraSectionProps = {
 
 export function MiraSection({ content }: MiraSectionProps) {
   return (
-    <Section id="mira" className="bg-background">
+    <Section id="mira">
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="rounded-[2.5rem] border border-border bg-card p-7 text-card-foreground soft-shadow sm:p-9">
           <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
             <Bot aria-hidden="true" className="size-7" />
           </div>
-          <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+          <p className="mb-4 font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary sm:text-lg">
             {content.mira.eyebrow}
           </p>
           <h2 className="font-heading text-4xl font-extrabold leading-[1.02] tracking-[-0.06em] sm:text-6xl">

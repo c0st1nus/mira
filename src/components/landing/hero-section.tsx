@@ -1,5 +1,9 @@
 import { ArrowRight, CalendarDays, MapPin, UsersRound } from "lucide-react";
-import { type LandingContent, registrationHref } from "@/lib/landing-content";
+import {
+  communityHref,
+  type LandingContent,
+  registrationHref,
+} from "@/lib/landing-content";
 import { CountdownTimer } from "./countdown-timer";
 
 const metaIcons = [CalendarDays, MapPin, UsersRound];
@@ -17,14 +21,14 @@ export function HeroSection({ content }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="landing-bg overflow-hidden px-4 pb-12 pt-8 sm:px-6 sm:py-14 lg:px-8 lg:py-20"
+      className="overflow-hidden px-4 pb-12 pt-8 sm:px-6 sm:py-14 lg:px-8 lg:py-20"
     >
       <div className="mx-auto grid max-w-7xl gap-7 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-10">
         <div className="relative">
-          <div className="mb-5 inline-flex rounded-full border border-primary/20 bg-card/90 px-3 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary shadow-sm sm:mb-8 sm:bg-card/80 sm:px-4 sm:text-xs sm:backdrop-blur">
+          <div className="mb-5 inline-flex rounded-full border border-primary/20 bg-card/90 px-6 py-3 font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary shadow-sm sm:mb-8 sm:bg-card/80 sm:text-lg sm:backdrop-blur">
             {content.hero.badge}
           </div>
-          <h1 className="max-w-5xl font-heading text-[3.35rem] font-extrabold leading-[0.88] tracking-[-0.075em] text-foreground sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-5xl break-words font-heading text-[2.85rem] font-extrabold leading-[0.9] tracking-[-0.075em] text-foreground min-[420px]:text-[3.35rem] sm:text-7xl sm:leading-[0.88] lg:text-8xl">
             {content.hero.titleBefore}{" "}
             <span className="text-primary">{content.hero.accent}</span>{" "}
             {content.hero.titleAfter}
@@ -48,13 +52,17 @@ export function HeroSection({ content }: HeroSectionProps) {
           <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-row">
             <a
               href={registrationHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-h-13 items-center justify-center gap-2 rounded-2xl bg-primary px-6 text-base font-bold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:min-h-12 sm:rounded-full"
             >
               {content.cta}
               <ArrowRight aria-hidden="true" className="size-5" />
             </a>
             <a
-              href="https://t.me/miramedia_ru"
+              href={communityHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-h-13 items-center justify-center rounded-2xl border border-border bg-card/80 px-6 text-base font-bold text-foreground transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:min-h-12 sm:rounded-full"
             >
               {content.community}
@@ -67,7 +75,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           <div className="relative rounded-[2rem] border border-border bg-card/92 p-3 sm:rounded-[2.5rem] sm:bg-card/72 sm:p-6 sm:backdrop-blur-xl">
             <CountdownTimer content={content} />
             <div className="mt-4 rounded-[1.5rem] border border-border bg-background/80 p-4 sm:mt-5 sm:rounded-[1.75rem] sm:p-5">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+              <p className="font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary sm:text-lg">
                 {content.hero.target}
               </p>
               <div className="mt-4 space-y-2 sm:mt-5 sm:space-y-3">

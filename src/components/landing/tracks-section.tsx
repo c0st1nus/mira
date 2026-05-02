@@ -13,7 +13,6 @@ export function TracksSection({ content }: TracksSectionProps) {
       eyebrow={content.tracks.eyebrow}
       title={content.tracks.title}
       description={content.tracks.description}
-      className="bg-secondary/45"
     >
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {content.tracks.items.map((track, index) => (

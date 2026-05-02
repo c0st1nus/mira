@@ -38,7 +38,7 @@ export function TrackCard({
       <span className="flip-card-inner relative block min-h-72 rounded-[2rem]">
         <span className="flip-card-face absolute inset-0 flex flex-col justify-between rounded-[2rem] border border-border bg-card p-6 soft-shadow">
           <span className="flex items-start justify-between gap-4">
-            <span className="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+            <span className="font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary">
               {String(index + 1).padStart(2, "0")} / {label}
             </span>
             <span className="flex size-10 items-center justify-center rounded-full bg-brand-blue-soft text-primary">
@@ -51,7 +51,7 @@ export function TrackCard({
         </span>
 
         <span className="flip-card-face flip-card-back absolute inset-0 flex flex-col justify-between rounded-[2rem] border border-primary/20 bg-primary p-6 text-primary-foreground soft-shadow">
-          <span className="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground/78">
+          <span className="font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary-foreground/78">
             {mechanicLabel}
           </span>
           <span className="text-lg font-semibold leading-8">{description}</span>
