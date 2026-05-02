@@ -1,0 +1,51 @@
+"use client";
+
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const themeKey = "mira-growth-hack-theme";
+
+type ThemeMode = "light" | "dark";
+
+function isTheme(value: string | null): value is ThemeMode {
+  return value === "light" || value === "dark";
+}
+
+export function ThemeToggle() {
+  const [theme, setTheme] = useState<ThemeMode>("light");
+
+  useEffect(() => {
+    const storedTheme = window.localStorage.getItem(themeKey);
+
+    if (isTheme(storedTheme)) {
+      setTheme(storedTheme);
+      return;
+    }
+
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    window.localStorage.setItem(themeKey, theme);
+  }, [theme]);
+
+  return (
+    <button
+      type="button"
+      aria-label={
+        theme === "dark" ? "Включить светлую тему" : "Включить темную тему"
+      }
+      className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      onClick={() => setTheme((value) => (value === "dark" ? "light" : "dark"))}
+    >
+      {theme === "dark" ? (
+        <Sun aria-hidden="true" className="size-4" />
+      ) : (
+        <Moon aria-hidden="true" className="size-4" />
+      )}
+    </button>
+  );
+}

@@ -21,7 +21,7 @@ export function HeroSection({ content }: HeroSectionProps) {
     >
       <div className="mx-auto grid max-w-7xl gap-7 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-10">
         <div className="relative">
-          <div className="mb-5 inline-flex rounded-full border border-primary/20 bg-card/80 px-3 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary shadow-sm backdrop-blur sm:mb-8 sm:px-4 sm:text-xs">
+          <div className="mb-5 inline-flex rounded-full border border-primary/20 bg-card/90 px-3 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary shadow-sm sm:mb-8 sm:bg-card/80 sm:px-4 sm:text-xs sm:backdrop-blur">
             {content.hero.badge}
           </div>
           <h1 className="max-w-5xl font-heading text-[3.35rem] font-extrabold leading-[0.88] tracking-[-0.075em] text-foreground sm:text-7xl lg:text-8xl">
@@ -37,7 +37,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             {meta.map((item) => (
               <div
                 key={item.label}
-                className="inline-flex min-h-11 items-center gap-2 rounded-2xl border border-border bg-card/86 px-3 text-sm font-semibold text-foreground backdrop-blur sm:rounded-full sm:px-4"
+                className="inline-flex min-h-11 items-center gap-2 rounded-2xl border border-border bg-card/92 px-3 text-sm font-semibold text-foreground sm:rounded-full sm:bg-card/86 sm:px-4 sm:backdrop-blur"
               >
                 <item.icon aria-hidden="true" className="size-4 text-primary" />
                 {item.label}
@@ -64,7 +64,7 @@ export function HeroSection({ content }: HeroSectionProps) {
 
         <div className="relative lg:pl-8">
           <div className="absolute -right-24 -top-20 hidden h-56 w-56 rounded-full bg-primary/16 blur-3xl lg:block" />
-          <div className="relative rounded-[2rem] border border-border bg-card/72 p-3 backdrop-blur-xl sm:rounded-[2.5rem] sm:p-6">
+          <div className="relative rounded-[2rem] border border-border bg-card/92 p-3 sm:rounded-[2.5rem] sm:bg-card/72 sm:p-6 sm:backdrop-blur-xl">
             <CountdownTimer content={content} />
             <div className="mt-4 rounded-[1.5rem] border border-border bg-background/80 p-4 sm:mt-5 sm:rounded-[1.75rem] sm:p-5">
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-primary">

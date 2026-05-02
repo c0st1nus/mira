@@ -28,44 +28,39 @@ export function FaqSection({ content }: FaqSectionProps) {
           return (
             <div
               key={item.question}
-              className="relative rounded-[1.5rem] border border-border bg-card transition-colors hover:bg-accent/35"
+              className="rounded-[1.5rem] border border-border bg-card transition-colors hover:bg-accent/35"
             >
               <button
                 type="button"
-                aria-label={item.question}
                 aria-expanded={isOpen}
                 aria-controls={panelId}
-                className="absolute inset-0 z-10 rounded-[1.5rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="flex min-h-16 w-full items-center justify-between gap-4 rounded-[1.5rem] px-5 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 onClick={() => setOpenIndex(isOpen ? -1 : index)}
-              />
-              <div className="pointer-events-none relative">
-                <div className="flex min-h-16 w-full items-center justify-between gap-4 px-5 py-4 text-left">
-                  <h3 className="font-heading text-lg font-extrabold tracking-[-0.03em] text-foreground sm:text-xl">
-                    {item.question}
-                  </h3>
-                  <ChevronDown
-                    aria-hidden="true"
-                    className={cn(
-                      "size-5 shrink-0 text-primary transition-transform duration-150 ease-out motion-reduce:transition-none",
-                      isOpen && "rotate-180",
-                    )}
-                  />
-                </div>
-                <div
-                  id={panelId}
-                  aria-hidden={!isOpen}
+              >
+                <h3 className="font-heading text-lg font-extrabold tracking-[-0.03em] text-foreground sm:text-xl">
+                  {item.question}
+                </h3>
+                <ChevronDown
+                  aria-hidden="true"
                   className={cn(
-                    "grid overflow-hidden transition-[grid-template-rows,opacity] duration-200 ease-out motion-reduce:transition-none",
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100"
-                      : "grid-rows-[0fr] opacity-0",
+                    "size-5 shrink-0 text-primary transition-transform duration-150 ease-out motion-reduce:transition-none",
+                    isOpen && "rotate-180",
                   )}
-                >
-                  <div className="min-h-0 overflow-hidden">
-                    <p className="px-5 pb-5 leading-8 text-muted-foreground">
-                      {item.answer}
-                    </p>
-                  </div>
+                />
+              </button>
+              <div
+                id={panelId}
+                className={cn(
+                  "grid overflow-hidden transition-[grid-template-rows,opacity] duration-200 ease-out motion-reduce:transition-none",
+                  isOpen
+                    ? "grid-rows-[1fr] opacity-100"
+                    : "grid-rows-[0fr] opacity-0",
+                )}
+              >
+                <div className="min-h-0 overflow-hidden">
+                  <p className="px-5 pb-5 leading-8 text-muted-foreground">
+                    {item.answer}
+                  </p>
                 </div>
               </div>
             </div>

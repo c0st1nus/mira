@@ -1,5 +1,5 @@
 import { LandingShell } from "@/components/landing/landing-shell";
 
 export default function Home() {
-  return <LandingShell />;
+  return <LandingShell language="ru" />;
 }
