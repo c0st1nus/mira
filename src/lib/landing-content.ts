@@ -1,6 +1,5 @@
 export type Language = "ru" | "en" | "kk";
 
-export const registrationHref = "#registration";
 export const communityHref = "https://t.me/+MhQzTZsn9ttiNzJi";
 
 export const languages: { code: Language; label: string }[] = [

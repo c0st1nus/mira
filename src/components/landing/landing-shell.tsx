@@ -25,7 +25,7 @@ export function LandingShell({ language }: { language: Language }) {
         <Header content={content} language={language} />
         <main className="landing-main">
           <div aria-hidden="true" className="section-flow-bg" />
-          <HeroSection content={content} />
+          <HeroSection content={content} language={language} />
           <AboutChallengeSection content={content} />
           <BenefitsSection content={content} />
           <TracksSection content={content} />
@@ -34,10 +34,10 @@ export function LandingShell({ language }: { language: Language }) {
           <TimelineSection content={content} />
           <RegistrationSection language={language} />
           <FaqSection content={content} />
-          <FinalCta content={content} />
+          <FinalCta content={content} language={language} />
         </main>
         <Footer content={content} />
-        <MobileActionBar content={content} />
+        <MobileActionBar content={content} language={language} />
       </div>
     </div>
   );

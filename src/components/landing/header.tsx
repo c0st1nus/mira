@@ -4,11 +4,10 @@ import {
   type Language,
   languages,
   navHrefs,
-  registrationHref,
 } from "@/lib/landing-content";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./mobile-nav";
-import { getLanguageHref } from "./routing";
+import { getLandingHref, getRegistrationHref } from "./routing";
 import { ThemeToggle } from "./theme-toggle";
 
 type HeaderProps = {
@@ -52,7 +51,7 @@ export function Header({ content, language }: HeaderProps) {
             {languages.map((item) => (
               <Link
                 key={item.code}
-                href={getLanguageHref(item.code)}
+                href={getLandingHref(item.code)}
                 aria-current={language === item.code ? "page" : undefined}
                 className={cn(
                   "inline-flex min-h-8 items-center rounded-full px-3 font-mono text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
@@ -67,7 +66,7 @@ export function Header({ content, language }: HeaderProps) {
           </div>
           <ThemeToggle />
           <a
-            href={registrationHref}
+            href={getRegistrationHref(language)}
             className="hidden min-h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:inline-flex"
           >
             {content.cta}

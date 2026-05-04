@@ -1,11 +1,13 @@
 import { ArrowRight } from "lucide-react";
-import { type LandingContent, registrationHref } from "@/lib/landing-content";
+import type { LandingContent, Language } from "@/lib/landing-content";
+import { getRegistrationHref } from "@/lib/language-routing";
 
 type FinalCtaProps = {
   content: LandingContent;
+  language: Language;
 };
 
-export function FinalCta({ content }: FinalCtaProps) {
+export function FinalCta({ content, language }: FinalCtaProps) {
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-border bg-card p-7 text-card-foreground soft-shadow sm:p-10 lg:p-14">
@@ -22,7 +24,7 @@ export function FinalCta({ content }: FinalCtaProps) {
             </p>
           </div>
           <a
-            href={registrationHref}
+            href={getRegistrationHref(language)}
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
           >
             {content.cta}

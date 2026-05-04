@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
+      suppressHydrationWarning
       className={cn(
         "h-full scroll-smooth antialiased",
         inter.variable,
@@ -40,7 +41,10 @@ export default function RootLayout({
         "font-sans",
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script src="/theme-init.js" />
+        {children}
+      </body>
     </html>
   );
 }

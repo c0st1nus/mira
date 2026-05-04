@@ -2,17 +2,19 @@ import { ArrowRight, CalendarDays, MapPin, UsersRound } from "lucide-react";
 import {
   communityHref,
   type LandingContent,
-  registrationHref,
+  type Language,
 } from "@/lib/landing-content";
+import { getRegistrationHref } from "@/lib/language-routing";
 import { CountdownTimer } from "./countdown-timer";
 
 const metaIcons = [CalendarDays, MapPin, UsersRound];
 
 type HeroSectionProps = {
   content: LandingContent;
+  language: Language;
 };
 
-export function HeroSection({ content }: HeroSectionProps) {
+export function HeroSection({ content, language }: HeroSectionProps) {
   const meta = content.hero.meta.map((label, index) => ({
     icon: metaIcons[index],
     label,
@@ -28,7 +30,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           <div className="mb-5 inline-flex rounded-full border border-primary/20 bg-card/90 px-6 py-3 font-mono text-base font-semibold uppercase tracking-[0.14em] text-primary shadow-sm sm:mb-8 sm:bg-card/80 sm:text-lg sm:backdrop-blur">
             {content.hero.badge}
           </div>
-          <h1 className="max-w-5xl break-words font-heading text-[2.85rem] font-extrabold leading-[0.9] tracking-[-0.075em] text-foreground min-[420px]:text-[3.35rem] sm:text-7xl sm:leading-[0.88] lg:text-8xl">
+          <h1 className="max-w-5xl wrap-break-word font-heading text-[2.85rem] font-extrabold leading-[0.9] tracking-[-0.075em] text-foreground min-[420px]:text-[3.35rem] sm:text-7xl sm:leading-[0.88] lg:text-8xl">
             {content.hero.titleBefore}{" "}
             <span className="text-primary">{content.hero.accent}</span>{" "}
             {content.hero.titleAfter}
@@ -51,7 +53,7 @@ export function HeroSection({ content }: HeroSectionProps) {
 
           <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-row">
             <a
-              href={registrationHref}
+              href={getRegistrationHref(language)}
               className="inline-flex min-h-13 items-center justify-center gap-2 rounded-2xl bg-primary px-6 text-base font-bold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:min-h-12 sm:rounded-full"
             >
               {content.cta}

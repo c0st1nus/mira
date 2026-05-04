@@ -7,10 +7,9 @@ import {
   type Language,
   languages,
   navHrefs,
-  registrationHref,
 } from "@/lib/landing-content";
 import { cn } from "@/lib/utils";
-import { getLanguageHref } from "./routing";
+import { getLandingHref, getRegistrationHref } from "./routing";
 
 type MobileNavProps = {
   content: LandingContent;
@@ -55,7 +54,7 @@ export function MobileNav({ content, language }: MobileNavProps) {
                 {languages.map((item) => (
                   <a
                     key={item.code}
-                    href={getLanguageHref(item.code)}
+                    href={getLandingHref(item.code)}
                     aria-current={language === item.code ? "page" : undefined}
                     className={cn(
                       "inline-flex min-h-10 flex-1 items-center justify-center rounded-xl font-mono text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
@@ -80,7 +79,7 @@ export function MobileNav({ content, language }: MobileNavProps) {
                 </a>
               ))}
               <a
-                href={registrationHref}
+                href={getRegistrationHref(language)}
                 className="mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-primary px-5 text-base font-semibold text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 onClick={() => setIsOpen(false)}
               >

@@ -21,26 +21,21 @@ function mapOptions<T extends readonly string[]>(
 const copy = {
   ru: {
     section: {
-      eyebrow: "Регистрация",
+      eyebrow: "",
       title: "Заполните заявку на Mira Growth Hack",
-      description:
-        "Выберите формат участия, оставьте контакты и подтвердите Telegram-канал. Это займет 2-3 минуты.",
-      badge: "До 4 человек",
-      asideTitle: "Одна форма для соло и команд",
+      description: "",
+      badge: "Mira Pro + leaderboard",
+      asideTitle: "Заявка — первый шаг к своей growth-кампании",
       asideText:
-        "Если участвуете индивидуально, блок сокомандников не нужен. Для команды форма запросит данные только тех участников, которых нужно добавить.",
+        "Можно идти одному или собрать команду до 4 человек: контент, Reels, лендинги, Telegram-боты, инфлюенсеры, SEO или совсем нестандартная механика — главное, привести пользователей в Mira.",
       notes: [
         [
-          "Условные поля",
-          "Поля сокомандников появятся только после выбора размера команды.",
+          "Уникальная ссылка",
+          "Твои привлеченные пользователи считаются по персональной ссылке — результат будет понятным и измеримым.",
         ],
         [
-          "Сохранение",
-          "После отправки заявка сохраняется в Google таблицу организаторов.",
-        ],
-        [
-          "Проверка",
-          "Форма валидируется на странице и повторно на сервере перед записью.",
+          "Leaderboard",
+          "Следи за позицией: чем больше реальных регистраций ты привел в Mira, тем выше поднимаешься.",
         ],
       ].map(([title, text]) => ({ title, text })),
     },
@@ -90,26 +85,21 @@ const copy = {
   },
   en: {
     section: {
-      eyebrow: "Registration",
+      eyebrow: "",
       title: "Apply for Mira Growth Hack",
-      description:
-        "Choose your participation format, leave your contacts, and confirm the Telegram channel. It takes 2-3 minutes.",
-      badge: "Up to 4 people",
-      asideTitle: "One form for solo participants and teams",
+      description: "",
+      badge: "Mira Pro + leaderboard",
+      asideTitle: "Your application starts the growth campaign",
       asideText:
-        "If you join solo, you will not need teammate fields. For teams, the form asks only for the teammates required by your selected team size.",
+        "Join solo or with up to 4 people: content, Reels, landing pages, Telegram bots, influencers, SEO, or something completely unexpected — the goal is to bring users to Mira.",
       notes: [
         [
-          "Conditional fields",
-          "Teammate fields appear only after you select your team size.",
+          "Unique link",
+          "Users you bring are counted through your personal link, so the result is clear and measurable.",
         ],
         [
-          "Saved to Sheets",
-          "After submission, the application is saved to the organizers' Google Sheet.",
-        ],
-        [
-          "Validation",
-          "The form is validated on the page and again on the server before saving.",
+          "Leaderboard",
+          "Track your position: the more real Mira registrations you bring, the higher you climb.",
         ],
       ].map(([title, text]) => ({ title, text })),
     },
@@ -159,26 +149,21 @@ const copy = {
   },
   kk: {
     section: {
-      eyebrow: "Тіркелу",
+      eyebrow: "",
       title: "Mira Growth Hack-қа өтінім толтырыңыз",
-      description:
-        "Қатысу форматын таңдаңыз, байланыс деректерін қалдырыңыз және Telegram-каналды растаңыз. Бұл 2-3 минут алады.",
-      badge: "4 адамға дейін",
-      asideTitle: "Жеке қатысушы мен командаға бір форма",
+      description: "",
+      badge: "Mira Pro + leaderboard",
+      asideTitle: "Өтінім — growth-кампанияның бірінші қадамы",
       asideText:
-        "Жеке қатыссаңыз, сокомандник өрістері қажет емес. Команда таңдасаңыз, форма тек қажет қатысушылардың деректерін сұрайды.",
+        "Жеке қатысыңыз немесе 4 адамға дейін команда жинаңыз: контент, Reels, лендингтер, Telegram-боттар, инфлюенсерлер, SEO немесе мүлде ерекше механика — бастысы, Mira-ға қолданушы әкелу.",
       notes: [
         [
-          "Шартты өрістер",
-          "Сокомандник өрістері команда көлемін таңдағаннан кейін ғана шығады.",
+          "Жеке сілтеме",
+          "Сен әкелген қолданушылар жеке сілтеме арқылы саналады, сондықтан нәтиже нақты және өлшенетін болады.",
         ],
         [
-          "Сақтау",
-          "Өтінім жіберілгеннен кейін деректер ұйымдастырушылардың Google кестесіне сақталады.",
-        ],
-        [
-          "Тексеру",
-          "Форма бетте және серверде қайта тексеріліп барып сақталады.",
+          "Leaderboard",
+          "Позицияңды бақыла: Mira-ға неғұрлым көп нақты тіркелу әкелсең, соғұрлым жоғары көтерілесің.",
         ],
       ].map(([title, text]) => ({ title, text })),
     },
