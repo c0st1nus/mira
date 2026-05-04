@@ -168,7 +168,7 @@ function RadioGroup({
       <legend className="text-sm font-bold text-foreground">
         {legend} <span className="text-destructive">*</span>
       </legend>
-      <div className="mt-3 grid gap-2 sm:grid-cols-2">
+      <div className="mt-3 grid gap-2">
         {options.map((option) => (
           <label
             key={option.value}
@@ -225,7 +225,7 @@ function TeammateFields({
         {index}
         {content.teammateTitleSuffix}
       </h4>
-      <div className="mt-4 grid gap-4 lg:grid-cols-3">
+      <div className="mt-4 grid gap-4">
         <TextField
           name={nameField}
           label={content.teammateNameLabel}
@@ -307,7 +307,7 @@ export function RegistrationForm({
         <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground">
           <CheckCircle2 aria-hidden="true" className="size-7" />
         </div>
-        <h3 className="mt-5 font-heading text-3xl font-extrabold tracking-[-0.05em] text-foreground">
+        <h3 className="mt-5 font-heading text-3xl font-extrabold tracking-tighter text-foreground">
           {content.successTitle}
         </h3>
         <p className="mx-auto mt-3 max-w-xl text-base leading-7 text-muted-foreground">
@@ -345,7 +345,7 @@ export function RegistrationForm({
         </div>
       )}
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      <div className="grid gap-5">
         <TextField
           name="email"
           label={content.emailLabel}
@@ -391,7 +391,7 @@ export function RegistrationForm({
         />
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      <div className="grid gap-5">
         <SelectField
           name="country"
           label={content.countryLabel}
@@ -439,7 +439,7 @@ export function RegistrationForm({
         )}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6">
         <RadioGroup
           name="teamSize"
           legend={content.teamSizeLegend}
@@ -458,7 +458,7 @@ export function RegistrationForm({
         />
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      <div className="grid gap-5">
         <TextField
           name="teamName"
           label={content.teamNameLabel}
@@ -492,7 +492,7 @@ export function RegistrationForm({
       {teammateCount > 0 && (
         <div className="space-y-4">
           <div>
-            <h3 className="font-heading text-2xl font-extrabold tracking-[-0.05em] text-foreground">
+            <h3 className="font-heading text-2xl font-extrabold tracking-tighter text-foreground">
               {content.teammatesTitle}
             </h3>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">

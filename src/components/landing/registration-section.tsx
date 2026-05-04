@@ -13,7 +13,7 @@ export function RegistrationSection({ language }: { language: Language }) {
       title={content.section.title}
       description={content.section.description}
     >
-      <div className="gap-6 lg:items-start">
+      <div className="mx-auto max-w-3xl gap-6 lg:items-start">
         <div className="rounded-[2rem] border border-border bg-card/92 p-4 text-card-foreground soft-shadow sm:p-6 lg:p-8">
           <RegistrationForm content={content.form} language={language} />
         </div>
