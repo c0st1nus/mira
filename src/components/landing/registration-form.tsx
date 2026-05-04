@@ -532,6 +532,7 @@ export function RegistrationForm({
             type="checkbox"
             name="subscribed"
             value="yes"
+            required
             defaultChecked={state.values.subscribed === "yes"}
             aria-invalid={state.errors.subscribed ? "true" : undefined}
             aria-describedby={

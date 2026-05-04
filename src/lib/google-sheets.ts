@@ -296,27 +296,8 @@ async function formatSheet(
           startColumnIndex: 0,
           endColumnIndex: registrationSheetHeaders.length,
         },
-        cell: {
-          userEnteredFormat: {
-            backgroundColor: {
-              red: 0.19,
-              green: 0.46,
-              blue: 0.86,
-            },
-            horizontalAlignment: "CENTER",
-            wrapStrategy: "WRAP",
-            textFormat: {
-              bold: true,
-              foregroundColor: {
-                red: 1,
-                green: 1,
-                blue: 1,
-              },
-            },
-          },
-        },
-        fields:
-          "userEnteredFormat(backgroundColor,horizontalAlignment,wrapStrategy,textFormat)",
+        cell: {},
+        fields: "userEnteredFormat",
       },
     },
     {
