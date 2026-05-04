@@ -23,8 +23,6 @@ export function FinalCta({ content }: FinalCtaProps) {
           </div>
           <a
             href={registrationHref}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
           >
             {content.cta}

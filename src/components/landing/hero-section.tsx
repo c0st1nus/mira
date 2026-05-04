@@ -52,8 +52,6 @@ export function HeroSection({ content }: HeroSectionProps) {
           <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-row">
             <a
               href={registrationHref}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex min-h-13 items-center justify-center gap-2 rounded-2xl bg-primary px-6 text-base font-bold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:min-h-12 sm:rounded-full"
             >
               {content.cta}

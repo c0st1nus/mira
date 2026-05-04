@@ -9,6 +9,7 @@ import { HeroSection } from "./hero-section";
 import { LanguageSync } from "./language-sync";
 import { MiraSection } from "./mira-section";
 import { MobileActionBar } from "./mobile-action-bar";
+import { RegistrationSection } from "./registration-section";
 import { StepsSection } from "./steps-section";
 import { TimelineSection } from "./timeline-section";
 import { TracksSection } from "./tracks-section";
@@ -17,7 +18,7 @@ export function LandingShell({ language }: { language: Language }) {
   const content = landingContent[language];
 
   return (
-    <div className="relative isolate min-h-screen overflow-hidden">
+    <div className="relative isolate min-h-screen overflow-x-clip">
       <LanguageSync language={language} />
       <div aria-hidden="true" className="ambient-bg" />
       <div className="relative z-10">
@@ -31,6 +32,7 @@ export function LandingShell({ language }: { language: Language }) {
           <StepsSection content={content} />
           <MiraSection content={content} />
           <TimelineSection content={content} />
+          <RegistrationSection language={language} />
           <FaqSection content={content} />
           <FinalCta content={content} />
         </main>

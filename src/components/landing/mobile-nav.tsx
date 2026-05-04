@@ -81,8 +81,6 @@ export function MobileNav({ content, language }: MobileNavProps) {
               ))}
               <a
                 href={registrationHref}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-primary px-5 text-base font-semibold text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 onClick={() => setIsOpen(false)}
               >

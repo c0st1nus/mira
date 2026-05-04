@@ -1,6 +1,6 @@
 export type Language = "ru" | "en" | "kk";
 
-export const registrationHref = "https://forms.gle/ptuXWSXY8TdYLK4t5";
+export const registrationHref = "#registration";
 export const communityHref = "https://t.me/+MhQzTZsn9ttiNzJi";
 
 export const languages: { code: Language; label: string }[] = [
@@ -191,8 +191,7 @@ export const landingContent = {
     tracks: {
       eyebrow: "Треки",
       title: "Выбери свой growth-угол атаки",
-      description:
-        "На desktop карточки раскрываются при наведении или фокусе. На телефоне — по нажатию.",
+      description: "",
       mechanic: "Механика",
       close: "Нажми еще раз, чтобы закрыть",
       sr: "Показать описание трека",
@@ -303,7 +302,7 @@ export const landingContent = {
       ].map(([question, answer]) => ({ question, answer })),
     },
     finalCta: {
-      eyebrow: "Финальный CTA",
+      eyebrow: "",
       title: "Готов построить свою growth-машину?",
       description:
         "Запускай кампанию, приводи пользователей и покажи себя команде Mira.",
@@ -390,8 +389,7 @@ export const landingContent = {
     tracks: {
       eyebrow: "Tracks",
       title: "Choose your growth angle",
-      description:
-        "Cards flip on hover or focus on desktop. On mobile, tap to reveal details.",
+      description: "",
       mechanic: "Mechanic",
       close: "Tap again to close",
       sr: "Show track description",
@@ -505,7 +503,7 @@ export const landingContent = {
       ].map(([question, answer]) => ({ question, answer })),
     },
     finalCta: {
-      eyebrow: "Final CTA",
+      eyebrow: "",
       title: "Ready to build your growth machine?",
       description:
         "Launch a campaign, bring users, and show what you can do to the Mira team.",
@@ -600,8 +598,7 @@ export const landingContent = {
     tracks: {
       eyebrow: "Тректер",
       title: "Өз growth бағытыңды таңда",
-      description:
-        "Desktop-та карточка hover/focus арқылы ашылады. Телефонда — tap арқылы.",
+      description: "",
       mechanic: "Механика",
       close: "Жабу үшін қайта бас",
       sr: "Трек сипаттамасын көрсету",
@@ -712,7 +709,7 @@ export const landingContent = {
       ].map(([question, answer]) => ({ question, answer })),
     },
     finalCta: {
-      eyebrow: "Финал CTA",
+      eyebrow: "",
       title: "Growth-машинаңды құруға дайынсың ба?",
       description:
         "Кампанияны іске қос, қолданушы әкел және Mira командасына өзіңді көрсет.",
