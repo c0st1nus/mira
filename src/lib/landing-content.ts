@@ -137,7 +137,7 @@ export const landingContent = {
       ],
     },
     countdown: {
-      label: "До старта хакатона",
+      label: "До конца регистрации осталось",
       date: "12 мая, 00:00",
       days: "дней",
       hours: "часов",
@@ -335,7 +335,7 @@ export const landingContent = {
       ],
     },
     countdown: {
-      label: "Hackathon starts in",
+      label: "Registration ends in",
       date: "May 12, 00:00",
       days: "days",
       hours: "hours",
@@ -544,7 +544,7 @@ export const landingContent = {
       ],
     },
     countdown: {
-      label: "Хакатон басталуына",
+      label: "Тіркелу аяқталуға",
       date: "12 мамыр, 00:00",
       days: "күн",
       hours: "сағ",

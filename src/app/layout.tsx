@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Manrope } from "next/font/google";
+import { Inter, Manrope, Noto_Sans_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -13,8 +13,8 @@ const manrope = Manrope({
   variable: "--font-heading",
 });
 
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
+const notoSansMono = Noto_Sans_Mono({
+  subsets: ["latin", "cyrillic", "cyrillic-ext"],
   variable: "--font-mono",
 });
 
@@ -37,7 +37,7 @@ export default function RootLayout({
         "h-full scroll-smooth antialiased",
         inter.variable,
         manrope.variable,
-        jetBrainsMono.variable,
+        notoSansMono.variable,
         "font-sans",
       )}
     >
