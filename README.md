@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Decentra Hack
 
-## Getting Started
+Лендинг для регистрации на хакатон с отправкой данных в Google Sheets.
 
-First, run the development server:
+## Требования
+
+- [Bun](https://bun.sh/) >= 1.2
+- Docker + Docker Compose (опционально, для production)
+
+## Настройка окружения
+
+1. Скопируйте пример переменных окружения:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+cp .env.local.example .env.local
+```
+
+2. Заполните `.env.local` реальными значениями:
+
+```env
+GOOGLE_SERVICE_ACCOUNT_EMAIL=your-service-account@project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\nYOUR_KEY_HERE\n-----END PRIVATE KEY-----
+GOOGLE_SHEET_ID=YOUR_SHEET_ID
+GOOGLE_SHEET_RANGE=Registrations!A:V
+```
+
+> ⚠️ **Важно:** `.env.local` содержит приватный ключ и не должен попадать в Git. Он уже добавлен в `.gitignore` и `.dockerignore`.
+
+## Локальный запуск (разработка)
+
+```bash
+# Установка зависимостей
+bun install
+
+# Запуск dev-сервера
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Запуск через Docker (production)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Сборка и запуск
+docker compose up --build -d
 
-## Learn More
+# Просмотр логов
+docker compose logs -f
 
-To learn more about Next.js, take a look at the following resources:
+# Остановка
+docker compose down
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Приложение будет доступно на [http://localhost:3000](http://localhost:3000).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Переменные окружения из `.env.local` подключаются через `docker-compose.yml` и не попадают в Docker-образ.
 
-## Deploy on Vercel
+## Доступные скрипты
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `bun dev` — запуск dev-сервера
+- `bun run build` — сборка production-версии
+- `bun run start` — запуск production-сервера
+- `bun run lint` — проверка кода (Biome)
+- `bun run format` — форматирование кода
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Структура проекта
+
+```
+src/
+  app/              # Next.js App Router
+    actions.ts      # Server Actions для отправки формы
+    page.tsx        # Главная страница
+    registration/   # Страница регистрации
+  components/       # React-компоненты
+  lib/              # Утилиты и вспомогательные функции
+```
+
+## Деплой
+
+Проект можно задеплоить на любую платформу, поддерживающую Docker, или на [Vercel](https://vercel.com).
+
+Для Vercel не забудьте добавить переменные окружения из `.env.local` в настройках проекта.

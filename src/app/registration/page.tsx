@@ -4,6 +4,8 @@ import { RouteShellFallback } from "@/components/landing/route-shell-fallback";
 import type { Language } from "@/lib/landing-content";
 import { parseLanguageParam } from "@/lib/language-routing";
 
+export const dynamic = "force-dynamic";
+
 async function RegistrationFromSearchParams({
   language,
 }: {
