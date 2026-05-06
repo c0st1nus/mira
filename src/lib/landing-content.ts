@@ -129,7 +129,7 @@ export const landingContent = {
       description:
         "Привлекай пользователей в Mira через контент, AI-агентов, мемы, лендинги, ботов, инфлюенсеров или любые другие growth-механики.",
       meta: ["12–21 мая", "Казахстан", "до 4 человек"],
-      target: "Growth target",
+      target: "Призовой фонд $4 000",
       targetSteps: [
         "Запусти гипотезу",
         "Получи уникальную ссылку",
@@ -170,7 +170,7 @@ export const landingContent = {
           "Сильные участники смогут показать себя перед международной командой продукта.",
         ],
         [
-          "Шанс выиграть $$$",
+          "Шанс разделить $4 000",
           "Лучшие участники и команды получат денежные призы по итогам challenge.",
         ],
         [
@@ -327,7 +327,7 @@ export const landingContent = {
       description:
         "Bring users to Mira through content, AI agents, memes, landing pages, bots, influencers, or any other growth mechanics.",
       meta: ["May 12–21", "Kazakhstan", "up to 4 people"],
-      target: "Growth target",
+      target: "Prize pool $4,000",
       targetSteps: [
         "Launch a hypothesis",
         "Get your unique link",
@@ -368,7 +368,7 @@ export const landingContent = {
           "Strong participants can show their skills to an international product team.",
         ],
         [
-          "A chance to win $$$",
+          "A chance to share $4,000",
           "Top participants and teams receive cash prizes after the challenge.",
         ],
         [
@@ -536,7 +536,7 @@ export const landingContent = {
       description:
         "Mira-ға қолданушыларды контент, AI-агенттер, мемдер, лендингтер, боттар, инфлюенсерлер немесе басқа growth-механикалар арқылы әкел.",
       meta: ["12–21 мамыр", "Қазақстан", "4 адамға дейін"],
-      target: "Growth target",
+      target: "Жүлде қоры $4 000",
       targetSteps: [
         "Гипотезаны іске қос",
         "Бірегей сілтеме ал",
@@ -577,7 +577,7 @@ export const landingContent = {
           "Мықты қатысушылар халықаралық өнім командасына өзін көрсете алады.",
         ],
         [
-          "$$$ ұтып алу мүмкіндігі",
+          "$4 000-ды бөлісу мүмкіндігі",
           "Үздік қатысушылар мен командалар challenge қорытындысы бойынша ақшалай жүлде алады.",
         ],
         [
