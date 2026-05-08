@@ -41,9 +41,9 @@ const copy = {
     },
     form: {
       selectPlaceholder: "Выберите вариант",
-      successTitle: "Заявка отправлена",
+      successTitle: "Заявка принята!",
       successText:
-        "Вступите в Telegram-сообщество, чтобы не пропустить анонсы и следующие шаги.",
+        "Вся полезная информация о хакатоне, менторские сессии, сертификаты будут в нашем Telegram-сообществе. Вступите в Telegram-канал Decentrathon, чтобы ничего не пропустить!",
       successCta: "Перейти в Telegram",
       emailLabel: "Электронная почта",
       fullNameLabel: "Ваше полное имя",
@@ -105,9 +105,9 @@ const copy = {
     },
     form: {
       selectPlaceholder: "Choose an option",
-      successTitle: "Application submitted",
+      successTitle: "Application accepted!",
       successText:
-        "Join the Telegram community so you do not miss announcements and next steps.",
+        "All useful information about the hackathon, mentor sessions, and certificates will be in our Telegram community. Join the Decentrathon Telegram channel so you do not miss anything!",
       successCta: "Open Telegram",
       emailLabel: "Email",
       fullNameLabel: "Your full name",
@@ -169,9 +169,9 @@ const copy = {
     },
     form: {
       selectPlaceholder: "Нұсқаны таңдаңыз",
-      successTitle: "Өтінім жіберілді",
+      successTitle: "Өтінім қабылданды!",
       successText:
-        "Анонстар мен келесі қадамдарды жіберіп алмау үшін Telegram-комьюнитиге қосылыңыз.",
+        "Хакатон туралы барлық пайдалы ақпарат, менторлық сессиялар және сертификаттар біздің Telegram-комьюнитиде болады. Ештеңені жіберіп алмау үшін Decentrathon Telegram-каналына қосылыңыз!",
       successCta: "Telegram-ға өту",
       emailLabel: "Email",
       fullNameLabel: "Толық атыңыз",

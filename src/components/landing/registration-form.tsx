@@ -23,6 +23,63 @@ function getError(errors: RegistrationErrors, name: RegistrationFieldName) {
 const inputClassName =
   "min-h-12 w-full rounded-2xl border border-input bg-background px-4 py-3 text-base text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 aria-invalid:border-destructive aria-invalid:ring-destructive/20";
 
+const communityLinkClassName =
+  "font-bold text-primary underline underline-offset-4 transition-colors hover:text-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
+
+const communityLinkPhrases = [
+  "Telegram-канал Decentrathon-а",
+  "Telegram-канал Decentrathon",
+  "Decentrathon Telegram-каналына",
+  "Decentrathon Telegram channel",
+  "Telegram-сообществе",
+  "Telegram-сообщество",
+  "Telegram-комьюнитиде",
+  "Telegram-комьюнитиге",
+  "Telegram community",
+  "Telegram channel",
+  "Telegram-канал",
+];
+
+function renderCommunityLinkedText(text: string) {
+  const parts = [];
+  let remaining = text;
+  let key = 0;
+
+  while (remaining) {
+    const match = communityLinkPhrases
+      .map((phrase) => ({ phrase, index: remaining.indexOf(phrase) }))
+      .filter((item) => item.index >= 0)
+      .sort(
+        (a, b) => a.index - b.index || b.phrase.length - a.phrase.length,
+      )[0];
+
+    if (!match) {
+      parts.push(remaining);
+      break;
+    }
+
+    if (match.index > 0) {
+      parts.push(remaining.slice(0, match.index));
+    }
+
+    parts.push(
+      <a
+        key={`${match.phrase}-${key}`}
+        href={communityHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={communityLinkClassName}
+      >
+        {match.phrase}
+      </a>,
+    );
+    remaining = remaining.slice(match.index + match.phrase.length);
+    key += 1;
+  }
+
+  return parts;
+}
+
 type FieldProps = {
   name: RegistrationFieldName;
   label: string;
@@ -311,7 +368,8 @@ export function RegistrationForm({
           {content.successTitle}
         </h3>
         <p className="mx-auto mt-3 max-w-xl text-base leading-7 text-muted-foreground">
-          {state.message} {content.successText}
+          {renderCommunityLinkedText(state.message)}{" "}
+          {renderCommunityLinkedText(content.successText)}
         </p>
         <a
           href={communityHref}
@@ -336,9 +394,13 @@ export function RegistrationForm({
               className="mt-0.5 size-5 shrink-0"
             />
             <div>
-              <p className="font-bold">{state.message}</p>
+              <p className="font-bold">
+                {renderCommunityLinkedText(state.message)}
+              </p>
               {state.errors.form && (
-                <p className="mt-1 text-destructive/90">{state.errors.form}</p>
+                <p className="mt-1 text-destructive/90">
+                  {renderCommunityLinkedText(state.errors.form)}
+                </p>
               )}
             </div>
           </div>
@@ -542,14 +604,14 @@ export function RegistrationForm({
           />
           <span>
             <span className="block text-sm font-bold text-foreground">
-              {content.subscribedLabel}{" "}
+              {renderCommunityLinkedText(content.subscribedLabel)}{" "}
               <span className="text-destructive">*</span>
             </span>
             <span
               id="subscribed-hint"
               className="mt-1 block text-sm leading-6 text-muted-foreground"
             >
-              {content.subscribedHint}
+              {renderCommunityLinkedText(content.subscribedHint)}
               <a
                 href={communityHref}
                 target="_blank"
@@ -566,7 +628,7 @@ export function RegistrationForm({
             id="subscribed-error"
             className="mt-2 text-sm font-medium text-destructive"
           >
-            {state.errors.subscribed}
+            {renderCommunityLinkedText(state.errors.subscribed)}
           </p>
         )}
       </div>

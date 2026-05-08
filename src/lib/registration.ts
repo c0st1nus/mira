@@ -386,8 +386,7 @@ const validationMessages: Record<Language, ValidationMessages> = {
       `Укажите Telegram сокомандника ${index}`,
     subscribed: "Подтвердите подписку на Telegram-канал",
     submitError: "Проверьте поля, выделенные ниже.",
-    success:
-      "Заявка отправлена. Мы сохранили данные и свяжемся с вами в Telegram.",
+    success: "Вы успешно зарегистрированы на Mira Growth Hack.",
     saveError:
       "Не удалось сохранить заявку. Проверьте подключение и попробуйте еще раз.",
     saveErrorHint:
@@ -418,8 +417,7 @@ const validationMessages: Record<Language, ValidationMessages> = {
       `Enter teammate ${index}'s Telegram account`,
     subscribed: "Confirm that you joined the Telegram channel",
     submitError: "Check the highlighted fields below.",
-    success:
-      "Your application has been submitted. We saved the data and will contact you on Telegram.",
+    success: "You have successfully registered for Mira Growth Hack.",
     saveError:
       "We could not save your application. Check your connection and try again.",
     saveErrorHint:
@@ -451,8 +449,7 @@ const validationMessages: Record<Language, ValidationMessages> = {
       `${index}-сокомандниктің Telegram аккаунтын енгізіңіз`,
     subscribed: "Telegram-каналға жазылғаныңызды растаңыз",
     submitError: "Төменде белгіленген өрістерді тексеріңіз.",
-    success:
-      "Өтінім жіберілді. Деректерді сақтадық және Telegram арқылы хабарласамыз.",
+    success: "Сіз Mira Growth Hack-қа сәтті тіркелдіңіз.",
     saveError:
       "Өтінімді сақтау мүмкін болмады. Байланысты тексеріп, қайта көріңіз.",
     saveErrorHint: "Қате қайталанса, Telegram-комьюнитиде бізге жазыңыз.",
