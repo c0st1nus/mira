@@ -138,7 +138,7 @@ export const landingContent = {
     },
     countdown: {
       label: "До конца регистрации осталось",
-      date: "12 мая, 00:00",
+      date: "18 мая, 00:00",
       days: "дней",
       hours: "часов",
       minutes: "мин",
@@ -252,9 +252,9 @@ export const landingContent = {
       eyebrow: "Таймлайн",
       title: "10 дней на запуск и проверку гипотезы",
       items: [
-        ["До 12 мая", "Регистрация", "Регистрация участников и команд."],
+        ["До 18 мая", "Регистрация", "Регистрация участников и команд."],
         [
-          "12 мая",
+          "18 мая",
           "Старт",
           "Участники получают доступ к Mira Pro, свои ссылки и начинают запускать growth-механики.",
         ],
@@ -326,7 +326,7 @@ export const landingContent = {
       titleAfter: "growth machine in 10 days",
       description:
         "Bring users to Mira through content, AI agents, memes, landing pages, bots, influencers, or any other growth mechanics.",
-      meta: ["May 12–21", "Kazakhstan", "up to 4 people"],
+      meta: ["May 18–21", "Kazakhstan", "up to 4 people"],
       target: "Prize pool $4,000",
       targetSteps: [
         "Launch a hypothesis",
@@ -336,7 +336,7 @@ export const landingContent = {
     },
     countdown: {
       label: "Registration ends in",
-      date: "May 12, 00:00",
+      date: "May 18, 00:00",
       days: "days",
       hours: "hours",
       minutes: "min",
@@ -450,17 +450,17 @@ export const landingContent = {
       title: "10 days to launch and validate",
       items: [
         [
-          "Before May 12",
+          "Before May 18",
           "Registration",
           "Registration for participants and teams.",
         ],
         [
-          "May 12",
+          "May 18",
           "Start",
           "Participants receive Mira Pro access, their links, and start launching growth mechanics.",
         ],
         [
-          "May 12–21",
+          "May 18–21",
           "Challenge",
           "Teams test ideas, bring users, and follow the leaderboard.",
         ],
@@ -509,7 +509,7 @@ export const landingContent = {
     },
     footer: {
       description:
-        "Mira Growth Hack is a 10-day AI-powered growth challenge for participants from Kazakhstan. From May 12 to 21, participants bring users to Mira through content, memes, landing pages, Telegram chats, bots, influencers, SEO, and other growth mechanics.",
+        "Mira Growth Hack is a 10-day AI-powered growth challenge for participants from Kazakhstan. From May 18 to 21, participants bring users to Mira through content, memes, landing pages, Telegram chats, bots, influencers, SEO, and other growth mechanics.",
       reachOut: "reach out to us",
       rights: "All rights reserved.",
       poweredBy: "Powered by",
@@ -545,7 +545,7 @@ export const landingContent = {
     },
     countdown: {
       label: "Тіркелу аяқталуға",
-      date: "12 мамыр, 00:00",
+      date: "18 мамыр, 00:00",
       days: "күн",
       hours: "сағ",
       minutes: "мин",
@@ -659,9 +659,9 @@ export const landingContent = {
       eyebrow: "Таймлайн",
       title: "Гипотезаны іске қосып тексеруге 10 күн",
       items: [
-        ["12 мамырға дейін", "Тіркелу", "Қатысушылар мен командаларды тіркеу."],
+        ["18 мамырға дейін", "Тіркелу", "Қатысушылар мен командаларды тіркеу."],
         [
-          "12 мамыр",
+          "18 мамыр",
           "Старт",
           "Қатысушылар Mira Pro, өз сілтемелерін алып, growth-механикаларын іске қосады.",
         ],
