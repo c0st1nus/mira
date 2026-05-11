@@ -4,7 +4,7 @@ import { CalendarDays } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { LandingContent } from "@/lib/landing-content";
 
-const targetDate = new Date("2026-05-12T00:00:00+05:00").getTime();
+const targetDate = new Date("2026-05-18T00:00:00+05:00").getTime();
 
 function getCountdown() {
   const diff = Math.max(0, targetDate - Date.now());
