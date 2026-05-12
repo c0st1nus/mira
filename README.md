@@ -33,6 +33,22 @@ TELEGRAM_SUBSCRIPTION_REQUIRED=true
 
 Для проверки Telegram-подписки бот должен быть добавлен в канал/чат, указанный в `TELEGRAM_CHANNEL_ID`. Если канал открыт через invite-ссылку, используйте numeric id вида `-100...`, а не саму ссылку.
 
+### BotFather
+
+Для браузерного входа через Telegram Login настройте домен бота в BotFather через `/setdomain`. Указывайте только домен без протокола и path:
+
+```text
+example.com
+```
+
+Для Telegram Web App или Menu Button указывайте полный HTTPS URL страницы регистрации:
+
+```text
+https://example.com/registration
+```
+
+Не указывайте API routes в BotFather. `/api/telegram/verify-subscription` вызывается приложением автоматически.
+
 ## Локальный запуск (разработка)
 
 ```bash
