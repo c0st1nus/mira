@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope, Noto_Sans_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { Providers } from "@/components/providers";
 import { cn } from "@/lib/utils";
 
 const metaPixelId = "1268867115231788";
@@ -59,6 +60,7 @@ fbq('init', '${metaPixelId}');
 fbq('track', 'PageView');`}
         </Script>
         <noscript>
+          {/* biome-ignore lint/performance/noImgElement: Meta Pixel noscript fallback must use a raw image. */}
           <img
             height="1"
             width="1"
@@ -67,7 +69,7 @@ fbq('track', 'PageView');`}
             src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`}
           />
         </noscript>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

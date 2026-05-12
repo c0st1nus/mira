@@ -1,8 +1,15 @@
 "use client";
 
 import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
-import { useActionState, useEffect, useState } from "react";
+import {
+  type ChangeEvent,
+  type FormEvent,
+  useActionState,
+  useEffect,
+  useState,
+} from "react";
 import { submitRegistration } from "@/app/actions";
+import { TelegramSubscriptionModal } from "@/components/telegram-subscription-modal";
 import { communityHref, type Language } from "@/lib/landing-content";
 import {
   getRequiredTeammateCount,
@@ -11,6 +18,7 @@ import {
   type RegistrationFieldName,
 } from "@/lib/registration";
 import type { RegistrationContent } from "@/lib/registration-content";
+import type { TelegramAuthPayload } from "@/lib/telegram-types";
 import { cn } from "@/lib/utils";
 
 type RegistrationFormContent = RegistrationContent["form"];
@@ -337,14 +345,51 @@ export function RegistrationForm({
   const [country, setCountry] = useState(state.values.country || "");
   const [city, setCity] = useState(state.values.city || "");
   const [status, setStatus] = useState(state.values.status || "");
+  const [telegramAuth, setTelegramAuth] = useState<TelegramAuthPayload | null>(
+    null,
+  );
+  const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
+  const [subscriptionTouched, setSubscriptionTouched] = useState(false);
   const teammateCount = getRequiredTeammateCount(teamSize);
   const isKazakhstanSelected = country === "Казахстан";
   const isNonKazakhstanCountrySelected =
     Boolean(country) && !isKazakhstanSelected;
+  const isSubscriptionVerified = Boolean(telegramAuth);
+  const subscriptionError =
+    state.errors.subscribed ||
+    (!isSubscriptionVerified && subscriptionTouched
+      ? content.subscriptionRequiredError
+      : undefined);
 
   function handleCountryChange(value: string) {
     setCountry(value);
     setCity("");
+  }
+
+  function handleSubscriptionChange(event: ChangeEvent<HTMLInputElement>) {
+    if (isSubscriptionVerified && !event.currentTarget.checked) {
+      setTelegramAuth(null);
+      setSubscriptionTouched(true);
+      return;
+    }
+
+    setShowSubscriptionModal(true);
+  }
+
+  function handleSubscriptionVerified(auth: TelegramAuthPayload) {
+    setTelegramAuth(auth);
+    setSubscriptionTouched(false);
+    setShowSubscriptionModal(false);
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    if (isSubscriptionVerified) {
+      return;
+    }
+
+    event.preventDefault();
+    setSubscriptionTouched(true);
+    setShowSubscriptionModal(true);
   }
 
   useEffect(() => {
@@ -357,6 +402,15 @@ export function RegistrationForm({
     );
     invalidField?.focus();
   }, [state]);
+
+  useEffect(() => {
+    if (!state.errors.subscribed) {
+      return;
+    }
+
+    setTelegramAuth(null);
+    setSubscriptionTouched(true);
+  }, [state.errors.subscribed]);
 
   if (state.status === "success") {
     return (
@@ -384,8 +438,28 @@ export function RegistrationForm({
   }
 
   return (
-    <form action={formAction} aria-busy={pending} className="space-y-8">
+    <form
+      action={formAction}
+      aria-busy={pending}
+      className="space-y-8"
+      onSubmit={handleSubmit}
+    >
       <input type="hidden" name="language" value={language} />
+      {telegramAuth && (
+        <>
+          <input type="hidden" name="subscribed" value="yes" />
+          <input
+            type="hidden"
+            name="telegramAuthType"
+            value={telegramAuth.auth_type}
+          />
+          <input
+            type="hidden"
+            name="telegramAuthValue"
+            value={telegramAuth.value}
+          />
+        </>
+      )}
       {state.message && (
         <div className="rounded-[1.5rem] border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">
           <div className="flex items-start gap-3">
@@ -592,15 +666,13 @@ export function RegistrationForm({
         <label className="flex cursor-pointer items-start gap-3">
           <input
             type="checkbox"
-            name="subscribed"
-            value="yes"
-            required
-            defaultChecked={state.values.subscribed === "yes"}
-            aria-invalid={state.errors.subscribed ? "true" : undefined}
+            checked={isSubscriptionVerified}
+            aria-invalid={subscriptionError ? "true" : undefined}
             aria-describedby={
-              state.errors.subscribed ? "subscribed-error" : "subscribed-hint"
+              subscriptionError ? "subscribed-error" : "subscribed-hint"
             }
             className="mt-1 size-5 rounded border-input text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            onChange={handleSubscriptionChange}
           />
           <span>
             <span className="block text-sm font-bold text-foreground">
@@ -621,17 +693,30 @@ export function RegistrationForm({
                 {content.telegramLinkLabel}
               </a>
             </span>
+            {isSubscriptionVerified && (
+              <span className="mt-2 flex items-center gap-2 text-sm font-bold text-primary">
+                <CheckCircle2 aria-hidden="true" className="size-4" />
+                {content.subscriptionVerifiedLabel}
+              </span>
+            )}
           </span>
         </label>
-        {state.errors.subscribed && (
+        {subscriptionError && (
           <p
             id="subscribed-error"
             className="mt-2 text-sm font-medium text-destructive"
           >
-            {renderCommunityLinkedText(state.errors.subscribed)}
+            {renderCommunityLinkedText(subscriptionError)}
           </p>
         )}
       </div>
+
+      <TelegramSubscriptionModal
+        content={content}
+        open={showSubscriptionModal}
+        onClose={() => setShowSubscriptionModal(false)}
+        onVerified={handleSubscriptionVerified}
+      />
 
       <button
         type="submit"

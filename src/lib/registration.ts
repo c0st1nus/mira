@@ -148,6 +148,8 @@ type ValidationMessages = {
   teammateEmailInvalid: (index: number) => string;
   teammateTelegram: (index: number) => string;
   subscribed: string;
+  subscriptionNotVerified: string;
+  subscriptionCheckFailed: string;
   submitError: string;
   success: string;
   saveError: string;
@@ -385,6 +387,9 @@ const validationMessages: Record<Language, ValidationMessages> = {
     teammateTelegram: (index: number) =>
       `Укажите Telegram сокомандника ${index}`,
     subscribed: "Подтвердите подписку на Telegram-канал",
+    subscriptionNotVerified: "Подписка на Telegram-канал не подтверждена",
+    subscriptionCheckFailed:
+      "Не удалось проверить подписку Telegram. Попробуйте еще раз.",
     submitError: "Проверьте поля, выделенные ниже.",
     success: "Вы успешно зарегистрированы на Mira Growth Hack.",
     saveError:
@@ -416,6 +421,9 @@ const validationMessages: Record<Language, ValidationMessages> = {
     teammateTelegram: (index: number) =>
       `Enter teammate ${index}'s Telegram account`,
     subscribed: "Confirm that you joined the Telegram channel",
+    subscriptionNotVerified: "Telegram channel subscription is not confirmed",
+    subscriptionCheckFailed:
+      "We could not verify your Telegram subscription. Try again.",
     submitError: "Check the highlighted fields below.",
     success: "You have successfully registered for Mira Growth Hack.",
     saveError:
@@ -448,6 +456,9 @@ const validationMessages: Record<Language, ValidationMessages> = {
     teammateTelegram: (index: number) =>
       `${index}-сокомандниктің Telegram аккаунтын енгізіңіз`,
     subscribed: "Telegram-каналға жазылғаныңызды растаңыз",
+    subscriptionNotVerified: "Telegram-каналға жазылу расталмады",
+    subscriptionCheckFailed:
+      "Telegram жазылымын тексеру мүмкін болмады. Қайта көріңіз.",
     submitError: "Төменде белгіленген өрістерді тексеріңіз.",
     success: "Сіз Mira Growth Hack-қа сәтті тіркелдіңіз.",
     saveError:
@@ -517,8 +528,10 @@ function getOptionLabel<T extends keyof OptionLabels>(
 export function validateRegistrationForm(
   formData: FormData,
   language: Language,
+  options: { requireSubscription?: boolean } = {},
 ) {
   const messages = getRegistrationMessages(language);
+  const requireSubscription = options.requireSubscription ?? true;
   const values = Object.fromEntries(
     fieldNames.map((name) => [name, readValue(formData, name)]),
   ) as Record<RegistrationFieldName, string>;
@@ -607,7 +620,7 @@ export function validateRegistrationForm(
     requireField("teammate3Telegram", messages.teammateTelegram(3));
   }
 
-  if (values.subscribed !== "yes") {
+  if (requireSubscription && values.subscribed !== "yes") {
     errors.subscribed = messages.subscribed;
   }
 
@@ -645,7 +658,10 @@ export function validateRegistrationForm(
     teammate3Name: teammateCount >= 3 ? values.teammate3Name : "-",
     teammate3Email: teammateCount >= 3 ? values.teammate3Email : "-",
     teammate3Telegram: teammateCount >= 3 ? values.teammate3Telegram : "-",
-    subscribed: registrationOptionLabels[language].subscribed,
+    subscribed:
+      requireSubscription || values.subscribed === "yes"
+        ? registrationOptionLabels[language].subscribed
+        : "-",
   };
 
   return { ok: true as const, payload, values };

@@ -79,6 +79,31 @@ const copy = {
       subscribedHint:
         "В канале будут анонсы, чат с единомышленниками и эксклюзивные конкурсы.",
       telegramLinkLabel: "Открыть канал",
+      subscriptionVerifiedLabel: "Подписка подтверждена.",
+      subscriptionRequiredError:
+        "Подтвердите подписку через Telegram, чтобы отправить заявку.",
+      subscriptionModalTitle: "Подтвердите подписку",
+      subscriptionModalDescription:
+        "Откройте канал, подпишитесь и войдите через Telegram. После этого мы автоматически проверим, что вы в канале.",
+      subscriptionModalOpenChannel: "Открыть канал в Telegram",
+      subscriptionModalLogin: "Войти через Telegram",
+      subscriptionModalPreparingLogin: "Готовим вход через Telegram...",
+      subscriptionModalBrowserHint:
+        "После входа мы проверим подписку и отметим чекбокс в форме.",
+      subscriptionModalChecking: "Проверяем подписку...",
+      subscriptionModalVerified:
+        "Подписка подтверждена. Можно отправлять заявку.",
+      subscriptionModalNotSubscribed:
+        "Подписка не найдена. Подпишитесь на канал и попробуйте еще раз.",
+      subscriptionModalRetry: "Я подписался, проверить еще раз",
+      subscriptionModalLoginUnavailable:
+        "Вход через Telegram временно недоступен. Попробуйте позже или откройте страницу из Telegram.",
+      subscriptionModalSettingsError: "Настройки Telegram временно недоступны.",
+      subscriptionModalAuthError:
+        "Telegram не передал данные авторизации. Откройте страницу из Telegram или войдите через Telegram в браузере.",
+      subscriptionModalGenericError:
+        "Не удалось проверить подписку Telegram. Попробуйте еще раз.",
+      subscriptionModalCloseLabel: "Закрыть окно проверки подписки",
       submitLabel: "Отправить заявку",
       pendingLabel: "Отправляем...",
     },
@@ -143,6 +168,32 @@ const copy = {
       subscribedHint:
         "The channel has hackathon updates, a community chat, and exclusive contests.",
       telegramLinkLabel: "Open channel",
+      subscriptionVerifiedLabel: "Subscription confirmed.",
+      subscriptionRequiredError:
+        "Confirm your Telegram subscription before submitting the application.",
+      subscriptionModalTitle: "Confirm your subscription",
+      subscriptionModalDescription:
+        "Open the channel, join it, and sign in with Telegram. We will then verify that you are in the channel.",
+      subscriptionModalOpenChannel: "Open channel in Telegram",
+      subscriptionModalLogin: "Sign in with Telegram",
+      subscriptionModalPreparingLogin: "Preparing Telegram sign-in...",
+      subscriptionModalBrowserHint:
+        "After sign-in, we will check the subscription and mark the checkbox in the form.",
+      subscriptionModalChecking: "Checking subscription...",
+      subscriptionModalVerified:
+        "Subscription confirmed. You can submit the application.",
+      subscriptionModalNotSubscribed:
+        "Subscription was not found. Join the channel and try again.",
+      subscriptionModalRetry: "I joined, check again",
+      subscriptionModalLoginUnavailable:
+        "Telegram sign-in is temporarily unavailable. Try later or open the page from Telegram.",
+      subscriptionModalSettingsError:
+        "Telegram settings are temporarily unavailable.",
+      subscriptionModalAuthError:
+        "Telegram did not pass authorization data. Open the page from Telegram or sign in with Telegram in your browser.",
+      subscriptionModalGenericError:
+        "We could not verify your Telegram subscription. Try again.",
+      subscriptionModalCloseLabel: "Close subscription verification dialog",
       submitLabel: "Submit application",
       pendingLabel: "Submitting...",
     },
@@ -207,6 +258,31 @@ const copy = {
       subscribedHint:
         "Каналда хакатон жаңалықтары, комьюнити чат және эксклюзив конкурстар болады.",
       telegramLinkLabel: "Каналды ашу",
+      subscriptionVerifiedLabel: "Жазылым расталды.",
+      subscriptionRequiredError:
+        "Өтінімді жіберу үшін Telegram жазылымын растаңыз.",
+      subscriptionModalTitle: "Жазылымды растаңыз",
+      subscriptionModalDescription:
+        "Каналды ашып, жазылыңыз және Telegram арқылы кіріңіз. Содан кейін біз сіздің каналда екеніңізді тексереміз.",
+      subscriptionModalOpenChannel: "Telegram каналын ашу",
+      subscriptionModalLogin: "Telegram арқылы кіру",
+      subscriptionModalPreparingLogin: "Telegram арқылы кіру дайындалуда...",
+      subscriptionModalBrowserHint:
+        "Кіргеннен кейін жазылымды тексеріп, формадағы чекбоксты белгілейміз.",
+      subscriptionModalChecking: "Жазылым тексерілуде...",
+      subscriptionModalVerified: "Жазылым расталды. Өтінімді жіберуге болады.",
+      subscriptionModalNotSubscribed:
+        "Жазылым табылмады. Каналға жазылып, қайта көріңіз.",
+      subscriptionModalRetry: "Жазылдым, қайта тексеру",
+      subscriptionModalLoginUnavailable:
+        "Telegram арқылы кіру уақытша қолжетімсіз. Кейінірек көріңіз немесе парақшаны Telegram-нан ашыңыз.",
+      subscriptionModalSettingsError:
+        "Telegram баптаулары уақытша қолжетімсіз.",
+      subscriptionModalAuthError:
+        "Telegram авторизация деректерін жібермеді. Парақшаны Telegram-нан ашыңыз немесе браузерде Telegram арқылы кіріңіз.",
+      subscriptionModalGenericError:
+        "Telegram жазылымын тексеру мүмкін болмады. Қайта көріңіз.",
+      subscriptionModalCloseLabel: "Жазылым тексеру терезесін жабу",
       submitLabel: "Өтінімді жіберу",
       pendingLabel: "Жіберілуде...",
     },

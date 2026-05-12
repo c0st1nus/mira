@@ -22,9 +22,16 @@ GOOGLE_SERVICE_ACCOUNT_EMAIL=your-service-account@project.iam.gserviceaccount.co
 GOOGLE_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\nYOUR_KEY_HERE\n-----END PRIVATE KEY-----
 GOOGLE_SHEET_ID=YOUR_SHEET_ID
 GOOGLE_SHEET_RANGE=Registrations!A:V
+TELEGRAM_BOT_TOKEN=123456:ABCDEF
+TELEGRAM_CHANNEL_ID=-1001234567890
+TELEGRAM_CHANNEL_URL=https://t.me/+MhQzTZsn9ttiNzJi
+TELEGRAM_CLIENT_ID=YOUR_TELEGRAM_CLIENT_ID
+TELEGRAM_SUBSCRIPTION_REQUIRED=true
 ```
 
 > ⚠️ **Важно:** `.env.local` содержит приватный ключ и не должен попадать в Git. Он уже добавлен в `.gitignore` и `.dockerignore`.
+
+Для проверки Telegram-подписки бот должен быть добавлен в канал/чат, указанный в `TELEGRAM_CHANNEL_ID`. Если канал открыт через invite-ссылку, используйте numeric id вида `-100...`, а не саму ссылку.
 
 ## Локальный запуск (разработка)
 

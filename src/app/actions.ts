@@ -8,6 +8,11 @@ import {
   registrationPayloadToSheetRow,
   validateRegistrationForm,
 } from "@/lib/registration";
+import {
+  isTelegramSubscriptionRequired,
+  readTelegramAuthFromFormData,
+  verifyTelegramSubscription,
+} from "@/lib/telegram";
 
 export async function submitRegistration(
   _prevState: RegistrationActionState,
@@ -15,7 +20,10 @@ export async function submitRegistration(
 ): Promise<RegistrationActionState> {
   const language = getRegistrationLanguage(formData);
   const messages = getRegistrationMessages(language);
-  const parsed = validateRegistrationForm(formData, language);
+  const requireSubscription = isTelegramSubscriptionRequired();
+  const parsed = validateRegistrationForm(formData, language, {
+    requireSubscription,
+  });
 
   if (!parsed.ok) {
     return {
@@ -24,6 +32,47 @@ export async function submitRegistration(
       errors: parsed.errors,
       values: parsed.values,
     };
+  }
+
+  if (requireSubscription) {
+    const telegramAuth = readTelegramAuthFromFormData(formData);
+
+    if (!telegramAuth) {
+      return {
+        status: "error",
+        message: messages.submitError,
+        errors: {
+          subscribed: messages.subscriptionNotVerified,
+        },
+        values: parsed.values,
+      };
+    }
+
+    try {
+      const subscription = await verifyTelegramSubscription(telegramAuth);
+
+      if (!subscription.subscribed) {
+        return {
+          status: "error",
+          message: messages.submitError,
+          errors: {
+            subscribed: messages.subscriptionNotVerified,
+          },
+          values: parsed.values,
+        };
+      }
+    } catch (error) {
+      console.error(error);
+
+      return {
+        status: "error",
+        message: messages.submitError,
+        errors: {
+          subscribed: messages.subscriptionCheckFailed,
+        },
+        values: parsed.values,
+      };
+    }
   }
 
   try {
